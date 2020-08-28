@@ -1,0 +1,7 @@
+# ImageGalleryPlugin info file: DON'T EDIT BY HAND
+thumbwidth=150
+thumbheight=150
+topics=GView.ImageGallery
+name=gview_blast_pangenome.png, version=1, origwidth=818, origheight=708, width=818, height=708, thumbwidth=173, thumbheight=150
+name=gview_blast_linear.png, version=1, origwidth=1395, origheight=375, width=1395, height=375, thumbwidth=558, thumbheight=150
+name=gview_blast_circular.png, version=1, origwidth=752, origheight=621, width=752, height=621, thumbwidth=182, thumbheight=150
