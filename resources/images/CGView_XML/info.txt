@@ -1,8 +1,0 @@
-# ImageGalleryPlugin info file: DON'T EDIT BY HAND
-thumbwidth=150
-thumbheight=150
-topics=GView.ImageGallery
-name=gview_xml_simple_linear.png, version=1, origwidth=2100, origheight=500, width=1600, height=381, thumbwidth=630, thumbheight=150
-name=gview_xml_simple_circular.png, version=1, origwidth=1000, origheight=1000, width=1000, height=1000, thumbwidth=150, thumbheight=150
-name=gview_xml_complex_circular.png, version=1, origwidth=1000, origheight=1000, width=1000, height=1000, thumbwidth=150, thumbheight=150
-name=gview_xml_complex_linear.png, version=1, origwidth=2200, origheight=600, width=1600, height=436, thumbwidth=550, thumbheight=150
