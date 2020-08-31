@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" codebase="https://www.gview.ca/webstart/current" 
+  href="gview-r-denitrificans-circular.jnlp"> 
+  <information> 
+    <title>GView</title> 
+    <vendor>Bioinformatics Corefacility</vendor> 
+    <homepage href="https://www.gview.ca"/> 
+    <description>GView</description>
+    <description kind="short">Java-based interactive genome viewer.</description> 
+    <icon href="gview.gif"/> 
+    <offline-allowed/> 
+  </information> 
+  <security> 
+    <all-permissions/> 
+  </security> 
+  <resources>
+    <j2se version="1.6+" max-heap-size="500M"/>
+    <jar href="gview.jar"/>
+    <jar href="r_denitrificans_example.jar"/>
+  </resources>
+  <application-desc>
+    <argument>-i</argument>
+    <argument>R_Denitrificans.gbk</argument>
+    <argument>-s</argument>
+    <argument>SimpleColouredCOGs.gss</argument>
+    <argument>-v</argument>
+    <argument>-l</argument>
+    <argument>circular</argument>
+  </application-desc>
+</jnlp>
