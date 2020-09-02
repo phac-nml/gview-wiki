@@ -1,0 +1,143 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@b@;
+
+
+1.1
+date	2012.05.09.16.30.51;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@none
+@
+text
+@/* This is a commment */
+ 
+/* Defines the set of FeatureFilters used to filter out features on the geneome this style is applied to. */
+FeatureFilter
+{
+        /* Defines a set of features, in this case all negative stranded features */
+        set0 : feature-filter(strand("negative"));
+}
+ 
+/* Information on the style for the background */
+background
+{
+        /* Defines the background color. */
+        color : color("white");
+}
+ 
+/* Global style information for slots */
+slot
+{
+        spacing : 10.0;
+}
+ 
+/* Style information for slot number 1 (one above the backbone) */
+slot#1
+{
+        color : color("red");
+        thickness : 20.0; /* Thickness of the slot */
+        feature-shape : shape("block");
+        feature-effect : shape-effect("standard");
+}
+ 
+/* Style information for labels within slot 1 */
+slot#1 labels
+{
+        text-color : color("red");
+        background-color : color(255,255,255,200);
+        font : font("SansSerif","plain",14);
+        label-extractor : text-extractor(annotation("product")); /* Defines how to extract text for the labels from the features (in this case, extract the "product" annotation). */
+        show-labels : "true";
+}
+ 
+/* Style information for all features belonging to set 0 within slot 1 */
+slot#1 FeatureSet#set0
+{
+        color : color("red");
+        thickness-proportion : 1.0; /* thickness as a proportion of slot thickness (from 0 to 1) */
+        feature-effect : shape-effect("standard");
+        feature-shape : shape("counterclockwise-arrow");
+        tooltip-text : text-extractor(annotation("product"));
+}
+ 
+/* Information specific to the tooltip item that is displayed */
+tooltip
+{
+        text-color : color("black");
+        outline-color : color(0,0,0,128);
+        background-color : color(134,134,255,255);
+        font : font("SansSerif","plain",12);
+}
+ 
+/* Style information for the ruler on the map */
+ruler
+{
+        major-tick-color : color("black");
+        minor-tick-color : color("black");
+        label-color : color("black");
+        major-tick-length : 8.0;
+        minor-tick-length : 3.0;
+        tick-density : 1.0;
+        tick-thickness : 2.0;
+        tick-padding : 10.0;
+        label-font : font("SansSerif","plain",12);
+}
+ 
+/* Style information for the backbone (the center circular/linear arc) for the map */
+backbone
+{
+        color : color("gray");
+        thickness : 5.0;
+        backbone-effect : shape-effect("standard");
+}
+ 
+legend#title /* Defines default style information for a legend text box with id=title */
+{
+        background-color : color("white");
+        text-color : color("black");
+        text-font : font("SansSerif", "bold", 14);
+        alignment : upper-center;
+}
+ 
+legend#title legenditem#0 /* Defines style information for text item with id=0 under legend with id=title */
+{
+        text-color : color("black");
+        text-font : font("SansSerif", "bold", 24);
+        legend-text : "NC_007622";
+}
+ 
+legend#1 /* Default style information for a legend text box with id=1 */
+{
+        background-color : color("white");
+        text-font : font("SansSerif", "plain", 12);
+        alignment : upper-right;
+}
+ 
+legend#1 legenditem#0 /* Defines style information for text item with id=0 under legend with id=1 */
+{
+        text-color : color("black");
+        text-font : font("SansSerif", "bold", 14);
+        legend-text : "Features";
+}
+ 
+legend#1 legenditem#1 /* Defines style information for text item with id=1 under legend with id=1 */
+{
+        text-color : color("black");
+        show-swatch : "true";
+        swatch-color : color("red");
+        legend-text : "Negative stranded";
+}
+@
